@@ -1,0 +1,5238 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="example/output/ds-ontology.owl"
+         xmlns="example/output/ds-ontology.owl#">
+
+<owl:Ontology rdf:about="example/output/ds-ontology.owl"/>
+
+<owl:ObjectProperty rdf:about="#spatialRelation">
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#L4"/>
+  <rdfs:range rdf:resource="#L2"/>
+  <rdfs:range rdf:resource="#L4"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#orientation">
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#measurement">
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#topology">
+  <rdfs:subPropertyOf rdf:resource="#spatialRelation"/>
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#RoadTopology"/>
+  <rdfs:range rdf:resource="#L2"/>
+  <rdfs:range rdf:resource="#RoadTopology"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#aheadOf">
+  <rdfs:subPropertyOf rdf:resource="#orientation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#behind">
+  <rdfs:subPropertyOf rdf:resource="#orientation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#leftAheadOf">
+  <rdfs:subPropertyOf rdf:resource="#orientation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#rightAheadOf">
+  <rdfs:subPropertyOf rdf:resource="#orientation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#leftBehind">
+  <rdfs:subPropertyOf rdf:resource="#orientation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#rightBehind">
+  <rdfs:subPropertyOf rdf:resource="#orientation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#leftOf">
+  <rdfs:subPropertyOf rdf:resource="#orientation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#rightOf">
+  <rdfs:subPropertyOf rdf:resource="#orientation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#relativeDistance">
+  <rdfs:subPropertyOf rdf:resource="#measurement"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#relativeVelocity">
+  <rdfs:subPropertyOf rdf:resource="#measurement"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#adjacent">
+  <rdfs:subPropertyOf rdf:resource="#topology"/>
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#RoadTopology"/>
+  <rdfs:range rdf:resource="#L2"/>
+  <rdfs:range rdf:resource="#RoadTopology"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#connected">
+  <rdfs:subPropertyOf rdf:resource="#topology"/>
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#RoadTopology"/>
+  <rdfs:range rdf:resource="#L2"/>
+  <rdfs:range rdf:resource="#RoadTopology"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#disjoint">
+  <rdfs:subPropertyOf rdf:resource="#topology"/>
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#RoadTopology"/>
+  <rdfs:range rdf:resource="#L2"/>
+  <rdfs:range rdf:resource="#RoadTopology"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#overlapping">
+  <rdfs:subPropertyOf rdf:resource="#topology"/>
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#RoadTopology"/>
+  <rdfs:range rdf:resource="#L2"/>
+  <rdfs:range rdf:resource="#RoadTopology"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#contains">
+  <rdfs:subPropertyOf rdf:resource="#topology"/>
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#RoadTopology"/>
+  <rdfs:range rdf:resource="#L2"/>
+  <rdfs:range rdf:resource="#RoadTopology"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#intersects">
+  <rdfs:subPropertyOf rdf:resource="#topology"/>
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#RoadTopology"/>
+  <rdfs:range rdf:resource="#L2"/>
+  <rdfs:range rdf:resource="#RoadTopology"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#equals">
+  <rdfs:subPropertyOf rdf:resource="#topology"/>
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#RoadTopology"/>
+  <rdfs:range rdf:resource="#L2"/>
+  <rdfs:range rdf:resource="#RoadTopology"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#semanticRelation"/>
+
+<owl:ObjectProperty rdf:about="#drive">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#drivenBy">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Human"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#raising">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Animal"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#raiseBy">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#Animal"/>
+  <rdfs:range rdf:resource="#Human"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#transport">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="#Item"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#loadOn">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#own">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Item"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#partOf">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#Vehicle_Component"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#affects_1">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#L2"/>
+  <rdfs:domain rdf:resource="#L5"/>
+  <rdfs:domain rdf:resource="#L3"/>
+  <rdfs:domain rdf:resource="#RoadsideUnit"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#affects_2">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#EdgeComputingUnit"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#affects_3">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#TrafficConditionChange"/>
+  <rdfs:range rdf:resource="#Human"/>
+  <rdfs:range rdf:resource="#Vehicle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#affects_4">
+  <rdfs:subPropertyOf rdf:resource="#semanticRelation"/>
+  <rdfs:domain rdf:resource="#WeatherConditions"/>
+  <rdfs:range rdf:resource="#RoadCondition"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasManufacturer">
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasWidth">
+  <rdfs:domain rdf:resource="#TrafficSign"/>
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasLength">
+  <rdfs:domain rdf:resource="#TrafficSign"/>
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasBehavior">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasFieldOfView">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasWeight">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasColor">
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#TrafficSign"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasHeight">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSpeed">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSpeed_x">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSpeed_y">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSpeed_z">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasAcceleration_x">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasAcceleration_y">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasAcceleration_z">
+  <rdfs:domain rdf:resource="#Human"/>
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMaxDeceleration">
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMaxSpeed">
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMaxAcceleration">
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasHeadingAngle">
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasHeadingAngleRateOfChange">
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasTimeToCollision">
+  <rdfs:domain rdf:resource="#Vehicle"/>
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasGeometry">
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCurvature">
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMaintenanceStatus">
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:domain rdf:resource="#TrafficSign"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDrivingDirection">
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasLaneID">
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasLaneCount">
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSpeedLimit">
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSpeedLowerLimit">
+  <rdfs:domain rdf:resource="#Road"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMaterial">
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasItemType">
+  <rdfs:domain rdf:resource="#Item"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasWindDirection">
+  <rdfs:domain rdf:resource="#Wind"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasWindSpeed">
+  <rdfs:domain rdf:resource="#Wind"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSolarIrradianceAngle">
+  <rdfs:domain rdf:resource="#Daylight"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSolarAzimuthAngle">
+  <rdfs:domain rdf:resource="#Daylight"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasTemperature">
+  <rdfs:domain rdf:resource="#TemperatureConditions"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasYear">
+  <rdfs:domain rdf:resource="#Time"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMonth">
+  <rdfs:domain rdf:resource="#Time"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasWeek">
+  <rdfs:domain rdf:resource="#Time"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasDay">
+  <rdfs:domain rdf:resource="#Time"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasHour">
+  <rdfs:domain rdf:resource="#Time"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasMinute">
+  <rdfs:domain rdf:resource="#Time"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSecond">
+  <rdfs:domain rdf:resource="#Time"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#L1">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#L2">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#L3">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#L4">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#L5">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#L6">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadCondition">
+  <rdfs:subClassOf rdf:resource="#L1"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadIrregularity">
+  <rdfs:subClassOf rdf:resource="#RoadCondition"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadMaterial">
+  <rdfs:subClassOf rdf:resource="#RoadCondition"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadTopology">
+  <rdfs:subClassOf rdf:resource="#L1"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Junction">
+  <rdfs:subClassOf rdf:resource="#RoadTopology"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Road">
+  <rdfs:subClassOf rdf:resource="#RoadTopology"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DrivingArea">
+  <rdfs:subClassOf rdf:resource="#Road"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadBoundary">
+  <rdfs:subClassOf rdf:resource="#Road"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadMark">
+  <rdfs:subClassOf rdf:resource="#L1"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IndicativeMark">
+  <rdfs:subClassOf rdf:resource="#RoadMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DirectionalMark">
+  <rdfs:subClassOf rdf:resource="#IndicativeMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ArrowMark">
+  <rdfs:subClassOf rdf:resource="#DirectionalMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LaneMark">
+  <rdfs:subClassOf rdf:resource="#IndicativeMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ProhibitoryMark">
+  <rdfs:subClassOf rdf:resource="#RoadMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WarningMark">
+  <rdfs:subClassOf rdf:resource="#RoadMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ParkingMark">
+  <rdfs:subClassOf rdf:resource="#ProhibitoryMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SpeedLimitMark">
+  <rdfs:subClassOf rdf:resource="#ProhibitoryMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DangerousAreaMark">
+  <rdfs:subClassOf rdf:resource="#WarningMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PedestrianCautionMark">
+  <rdfs:subClassOf rdf:resource="#WarningMark"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficInformationFacilities">
+  <rdfs:subClassOf rdf:resource="#L2"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficBasicFacilities">
+  <rdfs:subClassOf rdf:resource="#L2"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficControlFacilities">
+  <rdfs:subClassOf rdf:resource="#L2"/>
+</owl:Class>
+
+<owl:Class rdf:about="#UrbanInfrastructure">
+  <rdfs:subClassOf rdf:resource="#L2"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficInformationSigns">
+  <rdfs:subClassOf rdf:resource="#TrafficInformationFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IntersectionDirectionalSigns">
+  <rdfs:subClassOf rdf:resource="#TrafficInformationFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficSignals">
+  <rdfs:subClassOf rdf:resource="#TrafficInformationFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficSign">
+  <rdfs:subClassOf rdf:resource="#TrafficInformationFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadsideBillboards">
+  <rdfs:subClassOf rdf:resource="#TrafficInformationFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DigitalInformationDisplays">
+  <rdfs:subClassOf rdf:resource="#TrafficInformationFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadSurfaces">
+  <rdfs:subClassOf rdf:resource="#TrafficBasicFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PedestrianCrossings">
+  <rdfs:subClassOf rdf:resource="#TrafficBasicFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BicycleParkingRacks">
+  <rdfs:subClassOf rdf:resource="#TrafficBasicFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BusStops">
+  <rdfs:subClassOf rdf:resource="#TrafficBasicFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BusLanes">
+  <rdfs:subClassOf rdf:resource="#TrafficBasicFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sidewalk">
+  <rdfs:subClassOf rdf:resource="#TrafficBasicFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadsideParkingSpaces">
+  <rdfs:subClassOf rdf:resource="#TrafficBasicFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficControlBooths">
+  <rdfs:subClassOf rdf:resource="#TrafficControlFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficCones">
+  <rdfs:subClassOf rdf:resource="#TrafficControlFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadBarriers">
+  <rdfs:subClassOf rdf:resource="#TrafficControlFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficSigns">
+  <rdfs:subClassOf rdf:resource="#TrafficControlFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pole">
+  <rdfs:subClassOf rdf:resource="#TrafficSigns"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Polegroup">
+  <rdfs:subClassOf rdf:resource="#TrafficSigns"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SpeedLimitSigns">
+  <rdfs:subClassOf rdf:resource="#TrafficControlFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LaneDividers">
+  <rdfs:subClassOf rdf:resource="#TrafficControlFacilities"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Vegetation">
+  <rdfs:subClassOf rdf:resource="#UrbanInfrastructure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Rivers">
+  <rdfs:subClassOf rdf:resource="#UrbanInfrastructure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Building">
+  <rdfs:subClassOf rdf:resource="#UrbanInfrastructure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Bridge">
+  <rdfs:subClassOf rdf:resource="#UrbanInfrastructure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tunnel">
+  <rdfs:subClassOf rdf:resource="#UrbanInfrastructure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Mountains">
+  <rdfs:subClassOf rdf:resource="#UrbanInfrastructure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Forests">
+  <rdfs:subClassOf rdf:resource="#UrbanInfrastructure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Ground">
+  <rdfs:subClassOf rdf:resource="#UrbanInfrastructure"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadSurfaceChange">
+  <rdfs:subClassOf rdf:resource="#L3"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficConditionChange">
+  <rdfs:subClassOf rdf:resource="#L3"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadDamage">
+  <rdfs:subClassOf rdf:resource="#RoadSurfaceChange"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadCovered">
+  <rdfs:subClassOf rdf:resource="#RoadSurfaceChange"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SoilCovered">
+  <rdfs:subClassOf rdf:resource="#RoadCovered"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SandCovered">
+  <rdfs:subClassOf rdf:resource="#RoadCovered"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WaterCovered">
+  <rdfs:subClassOf rdf:resource="#RoadCovered"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GoodsCovered">
+  <rdfs:subClassOf rdf:resource="#RoadCovered"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RainCovered">
+  <rdfs:subClassOf rdf:resource="#RoadCovered"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MudRainCovered">
+  <rdfs:subClassOf rdf:resource="#RainCovered"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SleetCovered">
+  <rdfs:subClassOf rdf:resource="#RainCovered"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SnowCovered">
+  <rdfs:subClassOf rdf:resource="#RoadCovered"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficControl">
+  <rdfs:subClassOf rdf:resource="#TrafficConditionChange"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadConstruction">
+  <rdfs:subClassOf rdf:resource="#TrafficConditionChange"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Traffic_object">
+  <rdfs:subClassOf rdf:resource="#L4"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Vehicle">
+  <rdfs:subClassOf rdf:resource="#Traffic_object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MotorVehicle">
+  <rdfs:subClassOf rdf:resource="#Vehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PassengerVehicle">
+  <rdfs:subClassOf rdf:resource="#MotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CommercialVehicle">
+  <rdfs:subClassOf rdf:resource="#MotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Truck">
+  <rdfs:subClassOf rdf:resource="#CommercialVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LightTruck">
+  <rdfs:subClassOf rdf:resource="#Truck"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MediumTruck">
+  <rdfs:subClassOf rdf:resource="#Truck"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HeavyTruck">
+  <rdfs:subClassOf rdf:resource="#Truck"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Vans">
+  <rdfs:subClassOf rdf:resource="#CommercialVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CargoVan">
+  <rdfs:subClassOf rdf:resource="#Vans"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PassengerVan">
+  <rdfs:subClassOf rdf:resource="#Vans"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SpecialPurposeCommercialVehicle">
+  <rdfs:subClassOf rdf:resource="#CommercialVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FlatbedTruck">
+  <rdfs:subClassOf rdf:resource="#SpecialPurposeCommercialVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TankerTruck">
+  <rdfs:subClassOf rdf:resource="#SpecialPurposeCommercialVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RefrigeratedTruck">
+  <rdfs:subClassOf rdf:resource="#SpecialPurposeCommercialVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CraneTruck">
+  <rdfs:subClassOf rdf:resource="#SpecialPurposeCommercialVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CommercialBus">
+  <rdfs:subClassOf rdf:resource="#CommercialVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CityBus">
+  <rdfs:subClassOf rdf:resource="#CommercialBus"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TouristCoach">
+  <rdfs:subClassOf rdf:resource="#CommercialBus"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SchoolBus">
+  <rdfs:subClassOf rdf:resource="#CommercialBus"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Motorcycle">
+  <rdfs:subClassOf rdf:resource="#MotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ElectricVehicleHighSpeed">
+  <rdfs:subClassOf rdf:resource="#MotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SpecialPurposeVehicle">
+  <rdfs:subClassOf rdf:resource="#MotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PoliceCar">
+  <rdfs:subClassOf rdf:resource="#SpecialPurposeVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FireTruck">
+  <rdfs:subClassOf rdf:resource="#SpecialPurposeVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Ambulance">
+  <rdfs:subClassOf rdf:resource="#SpecialPurposeVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tractor">
+  <rdfs:subClassOf rdf:resource="#MotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OtherAgriculturalVehicle">
+  <rdfs:subClassOf rdf:resource="#MotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Caravan">
+  <rdfs:subClassOf rdf:resource="#MotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NonMotorVehicle">
+  <rdfs:subClassOf rdf:resource="#Vehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ElectricVehicleLowSpeed">
+  <rdfs:subClassOf rdf:resource="#NonMotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Bicycle">
+  <rdfs:subClassOf rdf:resource="#NonMotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Handcart">
+  <rdfs:subClassOf rdf:resource="#NonMotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tricycle">
+  <rdfs:subClassOf rdf:resource="#NonMotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#AnimalDrawnVehicle">
+  <rdfs:subClassOf rdf:resource="#NonMotorVehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RailTransport">
+  <rdfs:subClassOf rdf:resource="#Vehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Subway">
+  <rdfs:subClassOf rdf:resource="#RailTransport"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Tram">
+  <rdfs:subClassOf rdf:resource="#RailTransport"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LightRail">
+  <rdfs:subClassOf rdf:resource="#RailTransport"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HighSpeedRail">
+  <rdfs:subClassOf rdf:resource="#RailTransport"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Vehicle_Component">
+  <rdfs:subClassOf rdf:resource="#Traffic_object"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EngineSystem">
+  <rdfs:subClassOf rdf:resource="#Vehicle_Component"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ChassisSystem">
+  <rdfs:subClassOf rdf:resource="#Vehicle_Component"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IntelligentDrivingSystem">
+  <rdfs:subClassOf rdf:resource="#Vehicle_Component"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ElectricalSystem">
+  <rdfs:subClassOf rdf:resource="#Vehicle_Component"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BodySystem">
+  <rdfs:subClassOf rdf:resource="#Vehicle_Component"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Horn">
+  <rdfs:subClassOf rdf:resource="#ElectricalSystem"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Headlights">
+  <rdfs:subClassOf rdf:resource="#ElectricalSystem"/>
+</owl:Class>
+
+<owl:Class rdf:about="#BackupLight">
+  <rdfs:subClassOf rdf:resource="#Headlights"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TailLight">
+  <rdfs:subClassOf rdf:resource="#Headlights"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Headlight">
+  <rdfs:subClassOf rdf:resource="#Headlights"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EmergencyLight">
+  <rdfs:subClassOf rdf:resource="#Headlights"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TurnSignal">
+  <rdfs:subClassOf rdf:resource="#Headlights"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Door">
+  <rdfs:subClassOf rdf:resource="#BodySystem"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LicensePlate">
+  <rdfs:subClassOf rdf:resource="#BodySystem"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Human">
+  <rdfs:subClassOf rdf:resource="#L4"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Animal">
+  <rdfs:subClassOf rdf:resource="#L4"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Livestock">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Pet">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WildAnimal">
+  <rdfs:subClassOf rdf:resource="#Animal"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Item">
+  <rdfs:subClassOf rdf:resource="#L4"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Time">
+  <rdfs:subClassOf rdf:resource="#L5"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Day">
+  <rdfs:subClassOf rdf:resource="#Time"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Night">
+  <rdfs:subClassOf rdf:resource="#Time"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Sky">
+  <rdfs:subClassOf rdf:resource="#L5"/>
+</owl:Class>
+
+<owl:Class rdf:about="#WeatherConditions">
+  <rdfs:subClassOf rdf:resource="#L5"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Rain">
+  <rdfs:subClassOf rdf:resource="#WeatherConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LightRain">
+  <rdfs:subClassOf rdf:resource="#Rain"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ModerateRain">
+  <rdfs:subClassOf rdf:resource="#Rain"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HeavyRain">
+  <rdfs:subClassOf rdf:resource="#Rain"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Snow">
+  <rdfs:subClassOf rdf:resource="#WeatherConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LightSnow">
+  <rdfs:subClassOf rdf:resource="#Snow"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ModerateSnow">
+  <rdfs:subClassOf rdf:resource="#Snow"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HeavySnow">
+  <rdfs:subClassOf rdf:resource="#Snow"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fog">
+  <rdfs:subClassOf rdf:resource="#WeatherConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LightFog">
+  <rdfs:subClassOf rdf:resource="#Fog"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HeavyFog">
+  <rdfs:subClassOf rdf:resource="#Fog"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Haze">
+  <rdfs:subClassOf rdf:resource="#WeatherConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LightHaze">
+  <rdfs:subClassOf rdf:resource="#Haze"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ModerateHaze">
+  <rdfs:subClassOf rdf:resource="#Haze"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HeavyHaze">
+  <rdfs:subClassOf rdf:resource="#Haze"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Wind">
+  <rdfs:subClassOf rdf:resource="#WeatherConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LightWind">
+  <rdfs:subClassOf rdf:resource="#Wind"/>
+</owl:Class>
+
+<owl:Class rdf:about="#StrongWind">
+  <rdfs:subClassOf rdf:resource="#Wind"/>
+</owl:Class>
+
+<owl:Class rdf:about="#GustWind">
+  <rdfs:subClassOf rdf:resource="#Wind"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cloudy">
+  <rdfs:subClassOf rdf:resource="#WeatherConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FewClouds">
+  <rdfs:subClassOf rdf:resource="#Cloudy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ManyClouds">
+  <rdfs:subClassOf rdf:resource="#Cloudy"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TemperatureConditions">
+  <rdfs:subClassOf rdf:resource="#L5"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cold">
+  <rdfs:subClassOf rdf:resource="#TemperatureConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Warm">
+  <rdfs:subClassOf rdf:resource="#TemperatureConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Hot">
+  <rdfs:subClassOf rdf:resource="#TemperatureConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#LightingConditions">
+  <rdfs:subClassOf rdf:resource="#L5"/>
+</owl:Class>
+
+<owl:Class rdf:about="#ArtificialLighting">
+  <rdfs:subClassOf rdf:resource="#LightingConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#SignalLight">
+  <rdfs:subClassOf rdf:resource="#ArtificialLighting"/>
+</owl:Class>
+
+<owl:Class rdf:about="#TrafficLight">
+  <rdfs:subClassOf rdf:resource="#SignalLight"/>
+</owl:Class>
+
+<owl:Class rdf:about="#StreetLight">
+  <rdfs:subClassOf rdf:resource="#ArtificialLighting"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FloodLight">
+  <rdfs:subClassOf rdf:resource="#ArtificialLighting"/>
+</owl:Class>
+
+<owl:Class rdf:about="#CarLight">
+  <rdfs:subClassOf rdf:resource="#ArtificialLighting"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Daylight">
+  <rdfs:subClassOf rdf:resource="#LightingConditions"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MorningLight">
+  <rdfs:subClassOf rdf:resource="#Daylight"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DayTimeLight">
+  <rdfs:subClassOf rdf:resource="#Daylight"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DuskLight">
+  <rdfs:subClassOf rdf:resource="#Daylight"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EdgeComputingUnit">
+  <rdfs:subClassOf rdf:resource="#L6"/>
+</owl:Class>
+
+<owl:Class rdf:about="#RoadsideUnit">
+  <rdfs:subClassOf rdf:resource="#L6"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#passengervehicle1">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle2">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle3">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle4">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle5">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle6">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle7">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle8">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle9">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle10">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle11">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle12">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle13">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle14">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle15">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle16">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle17">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle18">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle19">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle20">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle21">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle22">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle23">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle24">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle25">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle26">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle27">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#trafficlight1">
+  <rdf:type rdf:resource="#TrafficLight"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle28">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle29">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road1">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk1">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle30">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle31">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road2">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers1">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle32">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle33">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle34">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle35">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle36">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle37">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle38">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle39">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle40">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle41">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk2">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle42">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle43">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle44">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle45">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle46">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle47">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle48">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle49">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle50">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle51">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle52">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle53">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle54">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle55">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle56">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle57">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle58">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle59">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle60">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle61">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle62">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle63">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle64">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle65">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle66">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle67">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle68">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle69">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle70">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle71">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle72">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle73">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers2">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers3">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle74">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk3">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road3">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers4">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle75">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk4">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle76">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole1">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk5">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle77">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle78">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle79">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle80">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle81">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle82">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle83">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle84">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle85">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle86">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road4">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle87">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle88">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building1">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building2">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle89">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle90">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle91">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle92">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle93">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle94">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle95">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle96">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle97">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle98">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle99">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle100">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle101">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle102">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle103">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle104">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle105">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle106">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle107">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle108">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle109">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle110">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle111">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers5">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation1">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle112">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle113">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle114">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle115">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle116">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle117">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers6">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle118">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle119">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle120">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole2">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road5">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle121">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle122">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle123">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle124">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle125">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle126">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle127">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle128">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle129">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle130">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle131">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle132">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle133">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle134">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk6">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation2">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk7">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle135">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle136">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle137">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle138">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle139">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building3">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle140">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle141">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle142">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle143">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk8">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle144">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk9">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk10">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle145">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle146">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human1">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle147">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle148">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle149">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk11">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road6">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk12">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk13">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle150">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle151">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle152">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation3">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk14">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human2">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle153">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle154">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle1">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building4">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle155">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle156">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk15">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#citybus1">
+  <rdf:type rdf:resource="#CityBus"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle157">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle158">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human3">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle159">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle160">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle161">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle162">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole3">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle163">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle1">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle164">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole4">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk16">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle165">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building5">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk17">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle2">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road7">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle3">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle166">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk18">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk19">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk20">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle167">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle4">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle168">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building6">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation4">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk21">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk22">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk23">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle169">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle170">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle171">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle5">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building7">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road8">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle2">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle172">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk24">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle173">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle174">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle3">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation5">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle175">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle6">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle176">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle7">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building8">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle4">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation6">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human4">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle177">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle178">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle179">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk25">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle180">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle181">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#trafficsign1">
+  <rdf:type rdf:resource="#TrafficSign"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle182">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human5">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road9">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers7">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle183">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle184">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle185">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle186">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle187">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle188">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle189">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk26">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle190">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road10">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle191">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building9">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk27">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle192">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle193">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle194">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle195">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk28">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk29">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk30">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle196">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human6">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle197">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle198">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle199">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle200">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle201">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle202">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road11">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle203">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle204">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation7">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle205">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle206">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle207">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle208">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle209">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle210">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle211">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle212">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle213">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle214">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle215">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle216">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle217">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk31">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle218">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle219">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle220">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle221">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building10">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle222">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road12">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle223">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle224">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle225">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle226">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk32">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle227">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle228">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle229">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle230">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle231">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle232">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle233">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle234">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle235">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle236">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle237">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building11">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk33">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road13">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human7">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk34">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole5">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk35">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle238">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human8">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road14">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle239">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle240">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road15">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle241">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human9">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle242">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle243">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk36">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human10">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human11">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human12">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human13">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle244">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human14">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk37">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole6">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle245">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human15">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle246">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road16">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human16">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human17">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle247">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle248">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk38">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle249">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human18">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle250">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human19">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle8">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle251">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk39">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human20">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle252">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle253">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle254">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle255">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle256">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle257">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle258">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle259">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle260">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle261">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle262">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle263">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle264">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle265">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle266">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle267">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle268">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle269">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle270">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle271">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle272">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle273">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle274">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle275">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle276">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle277">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk40">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle278">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle279">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle280">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle281">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle282">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle283">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle284">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle285">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle286">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle287">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle288">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle289">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle290">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road17">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk41">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk42">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human21">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle291">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk43">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk44">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road18">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road19">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle5">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle6">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road20">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk45">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle7">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human22">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human23">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk46">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk47">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human24">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk48">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle8">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human25">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk49">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human26">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk50">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle292">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human27">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle9">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle10">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle293">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk51">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road21">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human28">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle11">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk52">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human29">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk53">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle12">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road22">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk54">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road23">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human30">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human31">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle13">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle294">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human32">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle14">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human33">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road24">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk55">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human34">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk56">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle295">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle296">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle15">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle9">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle297">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human35">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human36">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road25">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle10">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human37">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle298">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human38">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle16">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation8">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building12">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk57">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle299">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle300">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers8">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle301">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle302">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle303">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road26">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation9">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle304">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building13">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle305">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk58">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle306">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle307">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle308">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle309">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk59">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle310">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building14">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building15">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle311">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road27">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle312">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle313">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole7">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle314">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle315">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle316">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle317">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle318">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle319">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk60">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building16">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle320">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk61">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole8">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole9">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole10">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation10">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle321">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle322">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle17">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle323">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle324">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building17">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle18">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human39">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk62">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle19">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole11">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle325">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle326">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle327">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle328">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle329">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole12">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle330">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation11">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle331">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle20">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle332">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road28">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle333">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole13">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human40">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk63">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole14">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk64">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle334">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human41">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle335">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle336">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk65">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole15">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle337">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole16">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle338">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human42">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building18">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle339">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk66">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road29">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk67">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building19">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole17">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole18">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle340">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle21">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle341">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human43">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human44">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human45">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle342">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle22">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human46">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human47">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building20">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human48">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle343">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle344">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle345">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle346">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle347">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle348">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building21">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle349">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle350">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle351">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle352">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road30">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle353">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk68">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road31">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#citybus2">
+  <rdf:type rdf:resource="#CityBus"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle354">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole19">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle355">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation12">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building22">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#citybus3">
+  <rdf:type rdf:resource="#CityBus"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#truck1">
+  <rdf:type rdf:resource="#Truck"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle356">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle357">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle358">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle359">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle360">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#truck2">
+  <rdf:type rdf:resource="#Truck"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#truck3">
+  <rdf:type rdf:resource="#Truck"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle361">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle362">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle363">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle364">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle365">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle366">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road32">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle367">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole20">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road33">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human49">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle368">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle369">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road34">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle370">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road35">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road36">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human50">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle371">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle372">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human51">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle373">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle374">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle375">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle376">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle377">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road37">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building23">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk69">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole21">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle378">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle379">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle380">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle381">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle382">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle383">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road38">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle384">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road39">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk70">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle385">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole22">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk71">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle386">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle387">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle388">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle389">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers9">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole23">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle23">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle390">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle391">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle392">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle393">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk72">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building24">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#trafficlight2">
+  <rdf:type rdf:resource="#TrafficLight"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle11">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers10">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building25">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle12">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#lanedividers11">
+  <rdf:type rdf:resource="#LaneDividers"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building26">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#citybus4">
+  <rdf:type rdf:resource="#CityBus"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole24">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human52">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle394">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk73">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#citybus5">
+  <rdf:type rdf:resource="#CityBus"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk74">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road40">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole25">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building27">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk75">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk76">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#citybus6">
+  <rdf:type rdf:resource="#CityBus"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle395">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole26">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk77">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building28">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk78">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building29">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building30">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle396">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building31">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human53">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk79">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle397">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle398">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle399">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle400">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle401">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle402">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road41">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle403">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#truck4">
+  <rdf:type rdf:resource="#Truck"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle404">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle405">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle406">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle407">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle408">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle409">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle410">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle411">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole27">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle412">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk80">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle413">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle414">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle415">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle416">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk81">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle417">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle418">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#motorcycle13">
+  <rdf:type rdf:resource="#Motorcycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle419">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle420">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle421">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle422">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human54">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk82">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle423">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole28">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle424">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk83">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road42">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle425">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole29">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle426">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle427">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle24">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle428">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle429">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk84">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle430">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road43">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk85">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road44">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle431">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle432">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle433">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle434">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle435">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle436">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle437">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building32">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle438">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk86">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle439">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle440">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle441">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle442">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk87">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human55">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle443">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle444">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle445">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle446">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle447">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle448">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk88">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk89">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle449">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle450">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human56">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle451">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk90">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle452">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle453">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle454">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle455">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle456">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk91">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle457">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle458">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle459">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle460">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle461">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle462">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle463">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building33">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole30">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle464">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle465">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle466">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle467">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road45">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building34">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle468">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle469">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle470">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human57">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building35">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle471">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road46">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle472">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle473">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle474">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building36">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole31">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle475">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle476">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle477">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk92">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle478">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle479">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road47">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle480">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle481">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle482">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle483">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle484">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building37">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle485">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle486">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle487">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle488">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle489">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle490">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle491">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle492">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle493">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle494">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road48">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle495">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building38">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road49">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#trafficsign2">
+  <rdf:type rdf:resource="#TrafficSign"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#trafficsign3">
+  <rdf:type rdf:resource="#TrafficSign"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle496">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle497">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle498">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle499">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle500">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building39">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human58">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road50">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#vegetation13">
+  <rdf:type rdf:resource="#Vegetation"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle501">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole32">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle502">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle503">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human59">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bicycle25">
+  <rdf:type rdf:resource="#Bicycle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle504">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle505">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road51">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road52">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle506">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road53">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk93">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#trafficsign4">
+  <rdf:type rdf:resource="#TrafficSign"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human60">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle507">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle508">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle509">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road54">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building40">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle510">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole33">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle511">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk94">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road55">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human61">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle512">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building41">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk95">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle513">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle514">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle515">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk96">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road56">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle516">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building42">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle517">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle518">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle519">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building43">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building44">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road57">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building45">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle520">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road58">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human62">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building46">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle521">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building47">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building48">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road59">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole34">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road60">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle522">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#truck5">
+  <rdf:type rdf:resource="#Truck"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road61">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human63">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk97">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road62">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle523">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building49">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle524">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk98">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human64">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle525">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle526">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle527">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk99">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road63">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road64">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle528">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building50">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road65">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle529">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human65">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human66">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk100">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk101">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk102">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human67">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle530">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole35">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk103">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole36">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building51">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk104">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk105">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road66">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human68">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human69">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk106">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#trafficsign5">
+  <rdf:type rdf:resource="#TrafficSign"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building52">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road67">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk107">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle531">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle532">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle533">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle534">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle535">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle536">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle537">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle538">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle539">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle540">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk108">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle541">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle542">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle543">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road68">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle544">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle545">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle546">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle547">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle548">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle549">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle550">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle551">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle552">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle553">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole37">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk109">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle554">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle555">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle556">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle557">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle558">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle559">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road69">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle560">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk110">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle561">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human70">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road70">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle562">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk111">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human71">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#building53">
+  <rdf:type rdf:resource="#Building"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#pole38">
+  <rdf:type rdf:resource="#Pole"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human72">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle563">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle564">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk112">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk113">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human73">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle565">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk114">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle566">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road71">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle567">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#passengervehicle568">
+  <rdf:type rdf:resource="#PassengerVehicle"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#road72">
+  <rdf:type rdf:resource="#Road"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#human74">
+  <rdf:type rdf:resource="#Human"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#sidewalk115">
+  <rdf:type rdf:resource="#Sidewalk"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
